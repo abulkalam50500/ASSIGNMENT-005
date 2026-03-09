@@ -6,7 +6,7 @@ const tabingBtnActive =async(btn_name)=>{
  all_tabing_btn.forEach((btn)=>btn.classList.remove('active'));
 
  let ActiveBtn = document.getElementById(btn_name);
-//  console.log(ActiveBtn);
+
  
  ActiveBtn.classList.add('active');
     
@@ -136,7 +136,7 @@ const OpenModal =async (id)=>{
     const res = await fetch(url);
     const res_data = await res.json();
     const data = res_data.data;
-    console.log(data);
+    
 
     const ModalCointainer = document.getElementById("modal_container");
     ModalCointainer.innerHTML = "";
@@ -230,7 +230,7 @@ const AllIssueData = async (btn_name)=>{
     ItemCount(data);
     LoadingSpinner(false);
 
-    // console.log(data);
+    
 
 }
 
@@ -286,6 +286,24 @@ const ClosedIssueData =async (btn_name)=>{
 const GlobalSearch =async ()=>{
 
     const searchValue = document.getElementById("search_input").value;
+    LoadingSpinner(true);
+    const url = `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchValue}`;
+    const res = await fetch(url);
+    const res_data = await res.json();
+    const data = res_data.data;
+
+
+    // display data
+    DisplayData(data);
+    // inside tabing item count 
+    ItemCount(data);
+    LoadingSpinner(false);
+
+}
+// search mobile
+const GlobalSearchMobile =async ()=>{
+
+    const searchValue = document.getElementById("search_input_mobile").value;
     LoadingSpinner(true);
     const url = `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchValue}`;
     const res = await fetch(url);

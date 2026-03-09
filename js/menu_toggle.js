@@ -2,7 +2,7 @@
 let MenuOpen = false;
 const ToggleMenu = ()=>{
 
-    console.log("click");
+    
      const menu = document.getElementById("small_device");
 
      if(MenuOpen==false){

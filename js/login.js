@@ -28,6 +28,6 @@ const PressLogin = () => {
 
 
 
-    console.log(Username, Password);
+   
 
 }
