@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Issues Tracker Login</title>
+
+    <!-- font css  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- tailwind + daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <section id="login-form">
+        <div class="max-w-[520px] flex items-center mx-auto bg-base-200 min-h-screen">
+
+            <div class="w-full">
+
+                <div class="card bg-base-100 w-full shrink-0 shadow-2xl p-2">
+                    <div class="card-body">
+
+                        <div class="login-head text-center">
+                            <img class="mx-auto w-[100px]" src="assets/github-logo.png" alt="">
+                            <h2 class="text-2xl font-semibold mt-5">GitHub Issues Tracker</h2>
+                            <p class="text-[#64748B] ">Sign in to manage your issues</p>
+                        </div>
+
+                        <fieldset class="fieldset">
+                            <label class="label font-medium text-[#1F2937] text-[16px]">Username</label>
+                            <input type="text" class="input w-full" id="user_name" placeholder="Username" />
+                            <span class="text-[#4A00FF] text-[14px]">Default: admin</span>
+                            <label class="label font-medium text-[#1F2937] text-[16px]">Password</label>
+                            <input type="password" class="input w-full" id="password" placeholder="Password" />
+                            <span class="text-[#4A00FF] text-[14px]">Default: admin123</span>
+                            
+                            <button onclick="PressLogin()" class="btn btn-primary mt-4">Sign In</button>
+                        </fieldset>
+
+                        <div class="login-break flex items-center mt-5">
+                            <hr class="w-[49%] text-[#E4E4E7]">
+                             <span class="mr-2 ml-2">OR</span>
+                            <hr class="w-[49%] text-[#E4E4E7]">
+                        </div>
+
+                        <div class="demo-credentials mx-auto text-center mt-5 space-y-5">
+                            <p class="text-center text-[14px] text-[#64748B]">Demo Credentials:</p>
+                            <div class="credentials">
+                                <strong>Username:</strong> <span>admin</span> <br>
+                                <strong>Password:</strong> <span>admin123</span> <br>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>
